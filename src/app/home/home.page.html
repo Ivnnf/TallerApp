@@ -1,20 +1,93 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-avatar slot="start">
+      <img src="assets/images/logo1.jpg" alt="Imagen de encabezado">
+    </ion-avatar>
     <ion-title>
-      Blank
+      ServiMotor Express
     </ion-title>
+    <ion-button color="primary" id="loginredirec" routerLink="/login">Iniciar Sesion</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card color="success" >
+    <img alt="Silhouette of mountains" src="assets/images/taller01.jpg" />
+    <ion-card-header>
+      <ion-card-title>Nuestra mision</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Proporcionar un servicio de calidad para brindar soluciones fiables y duraderas que conserven los autos en un estado óptimo, eficiente y seguro por medio de personal altamente capacitado.
+    </ion-card-content>
+  </ion-card>
+  <ion-card-title style="text-align: center;">Agenda tu Hora</ion-card-title>
+  
+  <ion-datetime locale="es-ES">
+    <span slot="time-label">Tiempo</span>
+  </ion-datetime>
+  <ion-item>
+    <ion-input label="Ingrese Su Correo" type="email" placeholder="  email@domain.com"></ion-input>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-button id="present-alert" class="botonEnviarCorreo">Enviar</ion-button>
+<ion-alert
+  trigger="present-alert"
+  header="Muchas Gracias por su Preferencia"
+  subHeader="Su hora a sido Agendada"
+  message="Lo contactaremos via correo"
+  [buttons]="alertButtons"
+></ion-alert>
+  
+
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Servicios</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/mantenimiento.jpg" />
+          </ion-thumbnail>
+          <ion-label>Mantenimiento preventivo.</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/general.jpg" />
+          </ion-thumbnail>
+          <ion-label>Mecánica en general.</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/suspension.jpg" />
+          </ion-thumbnail>
+          <ion-label>Sistemas de suspensión.</ion-label>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/pintura.jpg" />
+          </ion-thumbnail>
+          <ion-label>Chapa y pintura.</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/aceite.jpg" />
+          </ion-thumbnail>
+          <ion-label>Cambio de Aceite.</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+<div >
+
+</div>
+
+
+
 </ion-content>
