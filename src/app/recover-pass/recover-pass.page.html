@@ -1,0 +1,51 @@
+<!-- olvidar-contrasenia.page.html -->
+
+<ion-header [translucent]="true">
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-avatar slot="start">
+        <img src="assets/images/logo1.jpg" alt="Imagen de encabezado">
+      </ion-avatar>
+      <ion-title>
+        ServiMotor Express
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-toolbar>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img alt="Silhouette of mountains" src="assets/images/recoverpass.jpg"/>
+      </ion-thumbnail>
+      <ion-label>Recupere su contraseña</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Olvidar Contraseña</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Correo Electrónico</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button id="present-alert01" class="botonEnviarCorreo">Enviar</ion-button>
+  <ion-button color="danger" id="loginredirec" routerLink="/login">Volver</ion-button>
+<ion-alert
+  trigger="present-alert01"
+
+  header="Recibido Con exito"
+  subHeader="Le enviamos un correo de confirmacion"
+  message="Gracias!"
+  [buttons]="alertButtons"
+></ion-alert>
+
+
+  
+</ion-content>
